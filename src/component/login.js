@@ -1,20 +1,45 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export default class Login extends Component {
+    state = {
+        username: '',
+        password: ''
+    } 
+
+    handleChange = event => {
+        console.log(event.target.value);
+        this.setState({ username: event.target.value });
+    }
+
+    handleChangePassword = event => {
+        this.setState({ password: event.target.value });
+    }
+
+    handlerLogin = e => {
+        axios.post (`https://covid-goodlife.herokuapp.com/api/auth/login`, { username: "hanzo", password: "hide29f90892"})
+        .then(response => {
+            console.log(response);
+            const auth = response.data;
+            this.setState({ auth });
+          }).catch(error => {
+              console.log(error);
+          })
+    }
+
+    
+
     render() {
         return (
-            <form>
+            <form onSubmit={this.handlerLogin}>
 
-                <h3>Log in</h3>
-
+                <h3 className="login-title">Đăng nhập</h3>
                 <div className="form-group">
-                    <label>Email</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
+                    <input type="text" className="form-control" placeholder="Email" onChange={this.handleChange} />
                 </div>
 
                 <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
+                    <input type="password" className="form-control" placeholder="Mật khẩu" onChange={this.handleChangePassword} />
                 </div>
 
                 <div className="form-group">
@@ -24,9 +49,9 @@ export default class Login extends Component {
                     </div>
                 </div>
 
-                <button type="submit" className="btn btn-dark btn-lg btn-block">Sign in</button>
+                <button type= "submit" className="button-login">Sign in</button>
                 <p className="forgot-password text-right">
-                    Forgot <a href="#">password?</a>
+                    Forgot <a href="/">password?</a>
                 </p>
             </form>
         );

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Quicksand', sans-serif, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,13 +19,24 @@ body {
   display: flex;
   font-weight: 400;
   font-family: sans-serif;
-  background: #12c2e9;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
+  background: #12c2e9;
+  /* fallback for old browsers */
+  background: #9f9f9f;
+
+
 }
 
-body, html, .App, #root, .outer {
+/*
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);*/
+/* Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);*/
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+body,
+html,
+.App,
+#root,
+.outer {
   width: 100%;
   height: 100%;
 }
