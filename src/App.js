@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import Login from "./component/login.js"
 import SignUp from "./component/signup.js";
+import HomePage from "./component/homepage.js";
 
 function App() {
   return (<Router>
@@ -18,14 +19,14 @@ function App() {
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-          <div class="nav-logo">
-            <a class="nav-logo-item" href="/login">
-              <img src="../public/img/logo.jpg" alt="Logo" />
+          <div className="nav-logo">
+            <a className="nav-logo-item" href="/login">
+              <img src="assets/images/logo.png" alt="Logo" />
             </a>
           </div>
 
-          <div class="nav-list">
-            <ul class="nav-list-item hide-on-mobile">
+          <div className="nav-list">
+            <ul className="nav-list-item hide-on-mobile">
               <li><a href="#home">Trang chủ</a></li>
               <li><a href="#tu_van">Tư vấn điều trị</a></li>
               <li><a href="#dien_dan">Diễn đàn</a></li>
@@ -37,16 +38,15 @@ function App() {
         </div>
       </nav>
 
-      <div className="outer">
-        <div className="inner">
-          <Routes>
-            <Route exact path='/' element={<Login/>} />
-            <Route path="/sign-in" element={<Login/>} />
-            <Route path="/sign-up" element={<SignUp/>} />
-          </Routes>
-        </div>
-      </div>
+    
+      <Routes>
+      <Route exact path='/' element={<HomePage/>} />
+      <Route path="/sign-in" element={<Login/>} />
+      <Route path="/sign-up" element={<SignUp/>} />
+      </Routes>
+       
     </div></Router>
+    
   );
 }
 export default App;

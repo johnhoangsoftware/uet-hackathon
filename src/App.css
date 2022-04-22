@@ -1,63 +1,63 @@
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .App-logo {
-    height: 40vmin;
-    pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
-    color: #61dafb;
+  color: #61dafb;
 }
 
 .navbar {
-    background-color: #43B8C9;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    margin: 0 auto;
+  background-color: #43B8C9;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  margin: 0 auto;
 }
 
 
 .nav-logo,
 .nav-logo-item {
-    position: absolute;
-    width: 88.82px;
-    /*height: 65px;*/
-    left: 110px;
-    top: 15px;
-    height: var(--height-logo);
+
+  /*width: 88.82px;*/
+  /*height: 65px;*/
+  /*left: 110px;*/
+  /*top: 15px*/
+  height: var(--height-logo);
 }
 
 .nav-list {
-    display: flex;
-    justify-content: space-between;
-    width: 70%;
-    right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  right: 0;
 
-    /*width: 1160.02px;
+  /*width: 1160.02px;
     height: 40px;
     left: 786px;
     top: 27px;
@@ -65,17 +65,18 @@
 }
 
 .nav-list-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
 
-    position: absolute;
-
-    height: 40px;
-    right: 2%;
-    top: 10px;
-    /*
+  position: absolute;
+  font: optional;
+  font-size: small;
+  height: 40px;
+  right: 2%;
+  top: 10px;
+  /*
 width: 40%;
 left: 786px;
     align-items: center;
@@ -85,28 +86,28 @@ left: 786px;
 }
 
 .nav-list-item li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .nav-list-item a {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 100;
-    font-size: 20px;
-    line-height: 100px;
-    /* identical to box height */
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 100;
+  font-size: 20px;
+  line-height: 100px;
+  /* identical to box height */
 
-    color: #FFFFFF;
+  color: #FFFFFF;
 
 
-    /* Inside auto layout */
+  /* Inside auto layout */
 
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 10px;
-    text-decoration: none;
-    /*
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 10px;
+  text-decoration: none;
+  /*
     position: relative;
     
     color: var(--white-color);  
@@ -115,30 +116,30 @@ left: 786px;
 }
 
 .nav-list-item a::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    left: 50%;
-    width: 0;
-    background-color: var(--white-color);
-    bottom: 0;
-    z-index: 1;
-    transform: translateX(-50%);
+  position: absolute;
+  content: "";
+  height: 2px;
+  left: 50%;
+  width: 0;
+  background-color: var(--white-color);
+  bottom: 0;
+  z-index: 1;
+  transform: translateX(-50%);
 }
 
 .nav-list-item a:hover::after {
-    width: 100%;
-    transition: ease 0.3s;
+  width: 100%;
+  transition: ease 0.3s;
 }
 
 .nav-list-item li {
-    font-size: 1.4rem;
-    margin-right: 36px;
-    text-transform: uppercase;
+  font-size: 1.4rem;
+  margin-right: 36px;
+  text-transform: uppercase;
 }
 
 .login-title {
-    /*
+  /*
     position: absolute;
 width: 129px;
 height: 40px;
@@ -146,71 +147,106 @@ left: 535px;
 top: 254px;
 */
 
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    /* identical to box height */
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height */
 
 
-    color: #5A2D22;
+  color: #5A2D22;
 }
 
 .form-group {
-    display: block;
-    padding: 20px;
+  display: block;
+  padding: 20px;
 
-    border-radius: 11px;
+  border-radius: 11px;
 }
 
 input.form-control {
-
-    background-color: #E2F7FA;
+  background-color: #E2F7FA;
 }
 
 input.form-control:focus {
-    background-color: #E2F7FA;
+  background-color: #E2F7FA;
 }
 
 input.form-control::placeholder {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 10px;
-    /* or 71% */
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 550;
+  font-size: 14px;
+  line-height: 14px;
+  /* or 71% */
 
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 
 }
 
 button.button-login {
-    position: absolute;
-    background: #FF835C;
-    border-radius: 40px;
-    padding: 10px 20px;
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 20px;
-    /* or 83% */
+  position: center;
+  background: #FF835C;
+  border-radius: 40px;
+  padding: 10px 30px;
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 20px;
+  /* or 83% */
 
-    text-align: center;
+  text-align: center;
 
-    color: #FFFFFF;
+  color: #FFFFFF;
 
 }
 
+div.button-container {
+  text-align: center;
+}
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.homepage {
+  margin-top: 10%;
+}
+
+.info-show {
+
+  justify-content: space-between;
+  left: 0px;
+  top: 110px;
+  text-align: center;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.info-box {
+  flex: 1;
+}
+
+.info-title {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #6D463C;
 }

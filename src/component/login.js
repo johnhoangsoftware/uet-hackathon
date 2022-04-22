@@ -7,6 +7,14 @@ export default class Login extends Component {
         password: ''
     } 
 
+
+    config = {
+            method: 'post',
+            url: 'https://covid-goodlife.herokuapp.com/api/auth/login?username=hanzo&password=hide29f90892',
+            headers: { }
+    };
+
+    
     handleChange = event => {
         console.log(event.target.value);
         this.setState({ username: event.target.value });
@@ -17,21 +25,26 @@ export default class Login extends Component {
     }
 
     handlerLogin = e => {
-        axios.post (`https://covid-goodlife.herokuapp.com/api/auth/login`, { username: "hanzo", password: "hide29f90892"})
-        .then(response => {
-            console.log(response);
-            const auth = response.data;
-            this.setState({ auth });
-          }).catch(error => {
-              console.log(error);
-          })
+        var config = {
+            method: 'post',
+            url: 'https://covid-goodlife.herokuapp.com/api/auth/login?username=hanzo&password=hide29f90892',
+            headers: { }
+        };
+        axios(config)
+        .then((response) => {
+            console.log(JSON.stringify(response.data));
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+        
     }
 
     
 
     render() {
         return (
-            <form onSubmit={this.handlerLogin}>
+            <form onSubmit={this.handlerLogin} className = "login-form">
 
                 <h3 className="login-title">Đăng nhập</h3>
                 <div className="form-group">
@@ -48,8 +61,11 @@ export default class Login extends Component {
                         <label className="custom-control-label" htmlFor="customCheck1">Remember me</label>
                     </div>
                 </div>
-
-                <button type= "submit" className="button-login">Sign in</button>
+                
+                <div className="button-container">
+                    <button type= "submit" className="button-login" href="#">Sign in</button>
+                </div>
+           
                 <p className="forgot-password text-right">
                     Forgot <a href="/">password?</a>
                 </p>
